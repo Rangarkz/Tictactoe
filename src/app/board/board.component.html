@@ -1,0 +1,18 @@
+<h1>Tic-Tac-Toe</h1>
+
+<h1>{{player}} player turn</h1>
+
+<div>
+    <button  (click)="restartGame()">Restart game!</button>
+</div>
+
+<main>
+    <app-square 
+    *ngFor="let val of squares; let i=index"
+    [value]="val"
+    (click)="makeMove(i)">
+    </app-square>
+</main>
+
+
+<h1>{{winner}} wins the game</h1>
